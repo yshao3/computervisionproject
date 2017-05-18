@@ -6,7 +6,7 @@ function [mask, outputImagePatchLabels] = findseam(patchOnBackground, patchOnBac
     % offset
 
         % compute derivatives (used for the graphcut cost)
-         size(patchOnBackground)
+%          size(patchOnBackground)
 %         size(patchOnBackgroundMask)
 %         size(outputImage)
         xDerivativeFilter = [-1/2, 0, 1/2];

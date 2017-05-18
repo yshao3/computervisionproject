@@ -75,7 +75,18 @@ rand('state',0);
   [Hp,rows,cols] = getpatch(sz,p,psz);
   toFill = fillRegion(Hp);
   toFill = toFill(1:min(size(origImg,1),size(toFill,1)),1:min(size(origImg,2),size(toFill,2)));
-  
+%   % Find exemplar that minimizes error, Hq
+%   Hq = bestexemplar(img,img(rows,cols,:),toFill',sourceRegion);
+% 
+% 
+% %---------------------------------------------------------------------
+% % Scans over the entire image (with a sliding window)
+% % for the exemplar with the lowest error. Calls a MEX function.
+% %---------------------------------------------------------------------
+% function Hq = bestexemplar(img,Ip,toFill,sourceRegion)
+% m=size(Ip,1); mm=size(img,1); n=size(Ip,2); nn=size(img,2);
+% best = bestexemplarhelper(mm,nn,m,n,img,Ip,toFill,sourceRegion);
+% Hq = sub2ndx(best(1):best(2),(best(3):best(4))',mm);
 %---------------------------------------------------------------------
 % Returns the indices for a 9x9 patch centered at pixel p.
 %---------------------------------------------------------------------

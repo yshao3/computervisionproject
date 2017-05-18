@@ -1,5 +1,3 @@
-
-
 /**
  * A best exemplar finder.  Scans over the entire image (using a
  * sliding window) and finds the exemplar which minimizes the sum

@@ -14,7 +14,12 @@ function [mostmatchPatch, shifted] = MatchingSimilarPatches(toFill,Patch,targetP
          while y+size(Patch,2)-1<=B
 %              costs = Mcosts(Patch,...
 %                 targetPatch(x:x+size(Patch,1)-1,y:y+size(Patch,2)-1,:));
-             comparepatch = toFill.*targetPatch(x:x+size(Patch,1)-1,y:y+size(Patch,2)-1,:);
+             target = targetPatch(x:x+size(Patch,1)-1,y:y+size(Patch,2)-1,:);
+             if sum(find(sum(target,3)==0))~=0
+                    y = y+step;
+                    continue
+             end
+             comparepatch = (1-toFill).*target;
 %              costs = Mcosts(Patch,comparepatch);
              costs = sqrt(sum((Patch...
                  -comparepatch).^2, 3));

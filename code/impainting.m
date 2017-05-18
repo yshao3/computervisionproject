@@ -1,4 +1,4 @@
-i% inpainting.m
+% inpainting.m
 % 
 % The MATLAB implementation of inpainting algorithm by A. Criminisi (2004)
 %

@@ -1,0 +1,10 @@
+patch = im2double(imread('../data/inpaintingdata/9.png'));
+mask{1} = ~im2double(imread('../data/inpaintingdata/mask2.png'));
+% imshow(patch.*~mask)
+t = [10,20,50,100];
+patchsize = [5,11,21,51];
+outputimage = cell(4);
+outputlabel = cell(4);
+for i = 1:4
+[outputimage{i}, outputlabel{i}] = inpaint(patch, mask{i}, patchsize(i),t(i));
+end
