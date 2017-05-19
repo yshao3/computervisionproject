@@ -1,14 +1,4 @@
-% function [offset, p, s, Ind]= findlocation(patch, psize, t, step, n)
-%     s = MatchingSimilarPatches(patch,psize,t,step);
-%     [sortedX,sortingIndices] = sort(s(:,1,3),'descend');
-%     for i=1:n
-%         Ind(i) = sortingIndices(i);
-%         offset(i,:) = s(Ind(i),:,1);
-%         p(i,:) = s(Ind(i),:,2);
-%     end
-%     [val,Ind] = max(s(:,1,3));
-%     offset = s(Ind,:,1);
-%     p = s(Ind,:,2);
+
 function [toFill,Hp,rows,cols]=findlocation(origImg,mask,psz)
 %% error check
 mask(mask>0) = 1;
