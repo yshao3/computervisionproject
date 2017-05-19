@@ -10,13 +10,12 @@ https://github.com/jruales/Graphcut-Textures
 Algorithm:
 
 	Step1: Select region in output area with highest filling priority[A. Criminisi 2004]
-
 	Step2: Select most similar patch to this region using matching similar patch method[Kaiming He and Jian Sun 2006]
-	
 	Step3: Using Graph-Cut algorithm to fit new patch into selected region[Vivek Kwatra 2008]
 
-files:
-	code:
+Files:
+
+	Code:
 		-findseam.m
 			[mask, outputImagePatchLabels] = findseam(patchOnBackground, patchOnBackgroundMask, outputImage, outputImagePatchLabels, offset, patch)
 			inputs:
@@ -62,14 +61,14 @@ files:
 				-shifted: the position of most similar patch in input image
 		-*test.m
 			tests on different images, can run it manually
-	data:
+	Data:
 		-original data used for testing
 	resultdata: 
 		-images error percentage results among different models
 			-file start with fail means where my implementation did really bad
 		-16 images result using mask2
 		-other methods results
-	test:
+	Test:
 		-*test.m
 			tests on different images, can run it manually
 			-tested patch size
@@ -85,7 +84,7 @@ Paper reference:
 	A. Criminisi. Region Filling and Object Removal by Exemplar-Based Image Inpainting, 2004
 	Vivek Kwatra, Arno Schodl, Irfan Essa, Greg Turk, Aaron Bobick. Graph-cut Textures: Image and Video Synthesis Using Graph Cuts, 2008
 	Kaiming He and Jian Sun. Statistics of Patch Offsets for Image Completion, 2006
-----------------------------------
+
 
 
 	
