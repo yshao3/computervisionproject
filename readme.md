@@ -77,10 +77,12 @@ Files:
 			-mat data saved for different models
 
 Conclusion:
+
 	Numerical: Usually as good as other method, but sensitive to patch size and each iteration's result, and probably need a better matching similarity patch method
 	Visually: More consistent than other model
 
 Paper reference:
+
 	A. Criminisi. Region Filling and Object Removal by Exemplar-Based Image Inpainting, 2004
 	Vivek Kwatra, Arno Schodl, Irfan Essa, Greg Turk, Aaron Bobick. Graph-cut Textures: Image and Video Synthesis Using Graph Cuts, 2008
 	Kaiming He and Jian Sun. Statistics of Patch Offsets for Image Completion, 2006
